@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="227dp"
+        android:layout_height="30dp"
+        android:text="4th Yr BSIT"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.421" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="317dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:text="ICS 115"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/checkBox"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/checkBox"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox"
+        app:layout_constraintVertical_bias="0.002" />
+
+    <CheckBox
+        android:id="@+id/checkBox5"
+        android:layout_width="318dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:text="IT-ELEC3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/checkBox4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/checkBox4"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox4"
+        app:layout_constraintVertical_bias="0.003" />
+
+    <CheckBox
+        android:id="@+id/checkBox6"
+        android:layout_width="320dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="17dp"
+        android:text="IT-ELEC4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/checkBox5"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/checkBox5"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox5"
+        app:layout_constraintVertical_bias="0.007" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="COMMENTS"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox8"
+        app:layout_constraintVertical_bias="0.094" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="314dp"
+        android:layout_height="30dp"
+        android:text="IT 205"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.443"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.12" />
+
+    <CheckBox
+        android:id="@+id/checkBox8"
+        android:layout_width="323dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="22dp"
+        android:text="F-ELEC3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/checkBox7"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/checkBox7"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox7"
+        app:layout_constraintVertical_bias="0.005" />
+
+    <CheckBox
+        android:id="@+id/checkBox4"
+        android:layout_width="317dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="21dp"
+        android:text="ICS 125"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/checkBox3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/checkBox3"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox3"
+        app:layout_constraintVertical_bias="0.002" />
+
+    <CheckBox
+        android:id="@+id/checkBox7"
+        android:layout_width="321dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="20dp"
+        android:text="F-ELEC2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/checkBox6"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/checkBox6"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox6"
+        app:layout_constraintVertical_bias="0.004" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Next"
+        android:text="NEXT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.767"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.985" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="317dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="17dp"
+        android:text="IT-ELEC2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/checkBox2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/checkBox2"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox2"
+        app:layout_constraintVertical_bias="0.004" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Save"
+        android:text="SAVE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.987" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="322dp"
+        android:layout_height="65dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/checkBox8"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="@+id/checkBox8"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox8"
+        app:layout_constraintVertical_bias="0.37" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
