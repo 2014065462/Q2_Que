@@ -10,19 +10,17 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
-    EditText comment;
+    EditText comments;
     CheckBox c1,c2,c3,c4,c5,c6,c7,c8;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        comment = findViewById(R.id.editText2);
         this.setTitle(getResources().getString(R.string.activity_name));
         this.setTitle("SUBJECT REQUEST");
         c1 = findViewById(R.id.checkBox);
@@ -33,28 +31,41 @@ public class MainActivity extends AppCompatActivity {
         c6 = findViewById(R.id.checkBox6);
         c7 = findViewById(R.id.checkBox7);
         c8 = findViewById(R.id.checkBox8);
-
+        comments = findViewById(R.id.comments);
     }
     public void Next(View v) {
         startActivity(new Intent(this, Main2Activity.class));
     }
 
     public void Save(View v){
-        CheckBox[] checkbox = {c1,c2,c3,c4,c5,c6,c7,c8};
-
-        StringBuffer data = new StringBuffer();
-        for (CheckBox chkbx: checkbox){
-            if (chkbx.isChecked()){
-                data.append(chkbx.getText().toString() + ",");
-            }
-        } data.append("COMMENT:" + comment.getText().toString());
-
+        //CheckBox[] checkbox = {c1,c2,c3,c4,c5,c6,c7,c8};
         FileOutputStream writer = null;
         try {
             writer = openFileOutput("data1.txt", MODE_PRIVATE);
-            writer.write(data.toString().getBytes());
-            Log.d("lol",data.toString());
-            Toast.makeText(this, "Data saved.", Toast.LENGTH_LONG).show();
+            if (c1.isChecked()){
+                writer.write((c1.getText().toString() + "," ).getBytes());
+            }
+            if (c2.isChecked()){
+                writer.write((c2.getText().toString() + "," ).getBytes());
+            }
+            if (c3.isChecked()){
+                writer.write((c3.getText().toString() + "," ).getBytes());
+            }
+            if (c4.isChecked()){
+                writer.write((c4.getText().toString() + "," ).getBytes());
+            }
+            if (c5.isChecked()){
+                writer.write((c5.getText().toString() + "," ).getBytes());
+            }
+            if (c6.isChecked()){
+                writer.write((c6.getText().toString() + "," ).getBytes());
+            }
+            if (c7.isChecked()){
+                writer.write((c7.getText().toString() + "," ).getBytes());
+            }
+            if (c8.isChecked()){
+                writer.write((c8.getText().toString() + "," ).getBytes());
+            }
         } catch (FileNotFoundException e) {
             Log.d("lol", "File not found.");
             Toast.makeText(this, "File not found.", Toast.LENGTH_LONG).show();
@@ -72,5 +83,26 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Null Pointer Exception", Toast.LENGTH_LONG).show();
             }
         }
+
+        String comment = comments.getText().toString()+" ";
+        FileOutputStream writer2 = null;
+        try {
+            writer2 = openFileOutput("data2.txt", MODE_PRIVATE);
+            writer2.write(comment.getBytes());
+        } catch (FileNotFoundException e) {
+            Log.d("lol", "File not found.");
+            Toast.makeText(this, "File not found.", Toast.LENGTH_LONG).show();
+        } catch (IOException e) {
+            Log.d("lol", "IO error");
+            Toast.makeText(this, "IO Exception", Toast.LENGTH_LONG).show();
+        } finally {
+            try {
+                writer2.close();
+            } catch (IOException e) {
+                Log.d("lol", "IO error");
+                Toast.makeText(this, "IO Exception", Toast.LENGTH_LONG).show();
+            }
+        }
+        Toast.makeText(this, "Data saved.", Toast.LENGTH_LONG).show();
     }
 }
